@@ -1,0 +1,28 @@
+scenario: '1.0'
+
+info:
+  code: '02'
+  title: 'Check host availability'
+
+test:
+
+  input:
+    type: 'message'
+    count: '1'
+    payload: '{ "host" : "xxx.xxx.xxx.xxx", "timeoutms": 500 }'
+
+  infrastructure:
+    - 'Azure Service Bus'
+    - 'Azure Function'
+    - 'Azure CosmosDB'
+    - 'Azure Files'
+
+  output:
+    metrics:
+      - "Average execution time"
+      - "Average execution cost"
+    deploy:
+      - "Script for infrastructure creation"
+      - "Script for infrastructure removal"
+    test:
+      - "Script for scenario execution"
