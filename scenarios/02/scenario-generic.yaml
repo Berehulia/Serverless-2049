@@ -7,12 +7,10 @@ info:
 test:
 
   input:
-    type: 'message'
-    count: '1'
-    payload: '{ "host" : "xxx.xxx.xxx.xxx", "timeoutms": 500 }'
+    type: 'scheduler'
+
 
   infrastructure:
-    - 'Serverless Message Broker'
     - 'Serverless function'
     - 'Serverless NoSQL database'
     - 'Serverless File storage'

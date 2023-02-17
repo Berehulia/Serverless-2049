@@ -7,12 +7,10 @@ info:
 test:
 
   input:
-    type: 'message'
-    count: '1'
-    payload: '{ "host" : "xxx.xxx.xxx.xxx", "timeoutms": 500 }'
+    type: 'scheduler'
+
 
   infrastructure:
-    - 'AWS SQS'
     - 'AWS Lambda'
     - 'AWS DynamoDB'
     - 'AWS S3'

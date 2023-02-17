@@ -7,12 +7,9 @@ info:
 test:
 
   input:
-    type: 'message'
-    count: '1'
-    payload: '{ "host" : "xxx.xxx.xxx.xxx", "timeoutms": 500 }'
+    type: 'scheduler'
 
   infrastructure:
-    - 'Azure Service Bus'
     - 'Azure Function'
     - 'Azure CosmosDB'
     - 'Azure Files'
