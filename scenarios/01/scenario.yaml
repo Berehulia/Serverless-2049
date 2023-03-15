@@ -1,0 +1,24 @@
+Scenario: '1.0'
+
+Info:
+  Code: '01'
+  Title: 'HTTP -> NoSQL Database'
+
+Test:
+  
+  Input:
+    Type: 'HTTP'
+    Count: '100,000'
+    Payload: 'UUID' # Randomly generated UUID string
+    Parallel: 'true'
+
+  Output:
+    Metrics:
+      - 'Average execution time'
+      - 'Average execution cost'
+
+Infrastructure:
+  Function:
+  Database:
+
+Deploy:

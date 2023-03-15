@@ -1,0 +1,46 @@
+AWSTemplateFormatVersion: 2010-09-09
+Transform: AWS::Serverless-2016-10-31
+
+Globals:
+
+  Function:
+    FunctionUrlConfig:
+      AuthType: NONE
+    Runtime: java11
+    Tracing: Active
+
+Resources:
+
+  JavaFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: serverless2049-lambda-function-JavaFunction
+      CodeUri: ./java-function
+      Handler: com.lineup.scenario01.function.java.Function
+      Timeout: 30
+      MemorySize: 512
+      Environment:
+        Variables:
+          TABLE_NAME: serverless2049-dynamodb-table-Database
+      Policies:
+        - AmazonDynamoDBFullAccess
+
+  TestFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: serverless2049-lambda-function-TestFunction
+      CodeUri: ./test-function
+      Handler: com.lineup.scenario01.function.test.Function
+      Timeout: 600
+      MemorySize: 10240
+      Environment:
+        Variables:
+          FUNCTION_URL: !GetAtt JavaFunctionUrl.FunctionUrl
+
+  Table:
+    Type: AWS::Serverless::SimpleTable
+    Properties:
+      TableName: serverless2049-dynamodb-table-Database
+      PrimaryKey:
+        Name: id
+        Type: String
