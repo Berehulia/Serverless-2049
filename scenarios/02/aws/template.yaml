@@ -1,0 +1,73 @@
+AWSTemplateFormatVersion: 2010-09-09
+Transform: AWS::Serverless-2016-10-31
+
+Globals:
+
+  Function:
+    Environment:
+      Variables:
+        BUCKET_NAME: !Ref FileBucket
+        FILE_NAME: 20MB.txt
+    FunctionUrlConfig:
+      AuthType: NONE
+    MemorySize: 512
+    Runtime: java11
+    Timeout: 30
+
+Resources:
+
+  Java11Function:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: ./java-function
+      FunctionName: serverless2049-scenario02-function-Java11Function
+      Handler: com.lineup.scenario02.function.java.Function
+      Policies:
+        - AmazonS3FullAccess
+
+  Java11ArmFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: ./java-function
+      FunctionName: serverless2049-scenario02-function-Java11ArmFunction
+      Handler: com.lineup.scenario02.function.java.Function
+      Policies:
+        - AmazonS3FullAccess
+      Architectures:
+        - arm64
+
+  Java11SnapStartFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: ./java-function
+      FunctionName: serverless2049-scenario02-function-Java11SnapStartFunction
+      Handler: com.lineup.scenario02.function.java.Function
+      Policies:
+        - AmazonS3FullAccess
+      AutoPublishAlias: snap
+      SnapStart:
+        ApplyOn: PublishedVersions
+
+  GraalFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: java-function/native.zip
+      FunctionName: serverless2049-scenario02-function-GraalFunction
+      Handler: com.lineup.scenario02.function.java.Function
+      Runtime: provided.al2
+      Policies:
+        - AmazonS3FullAccess
+
+  FileBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: True
+        BlockPublicPolicy: True
+        IgnorePublicAcls: True
+        RestrictPublicBuckets: True
+
+Outputs:
+
+  FileBucketUrl:
+    Value: !Sub "s3://${FileBucket}"

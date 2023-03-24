@@ -1,0 +1,12 @@
+version = 0.1
+[default]
+[default.deploy]
+[default.deploy.parameters]
+stack_name = "Serverless2049-Scenario-02"
+s3_bucket = "serverless2049"
+s3_prefix = "scenario-02"
+region = "eu-central-1"
+confirm_changeset = true
+capabilities = [ "CAPABILITY_IAM" ]
+disable_rollback = false
+image_repositories = []

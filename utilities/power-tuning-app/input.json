@@ -1,0 +1,29 @@
+{
+  "lambdaARN": "your-lambda-function-arn",
+  "strategy": "speed",
+  "num": 100,
+  "payload": {
+    "body": "",
+    "headers": {},
+    "httpMethod": "GET",
+    "isBase64Encoded": false,
+    "multiValueHeaders": {},
+    "multiValueQueryStringParameters": {},
+    "path": "",
+    "pathParameters": {},
+    "queryStringParameters": {},
+    "requestContext": {},
+    "resource": "",
+    "stageVariables": {}
+  },
+  "powerValues": [
+    256,
+    512,
+    768,
+    1024,
+    2048,
+    3072,
+    4096,
+    8192
+  ]
+}

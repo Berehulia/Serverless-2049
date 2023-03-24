@@ -1,0 +1,12 @@
+version = 0.1
+[default]
+[default.deploy]
+[default.deploy.parameters]
+stack_name = "Serverless2049-PowerTuningApp"
+s3_bucket = "serverless2049"
+s3_prefix = "power-tuning-app"
+region = "eu-central-1"
+confirm_changeset = true
+capabilities = [ "CAPABILITY_IAM", "CAPABILITY_AUTO_EXPAND"]
+disable_rollback = false
+image_repositories = []

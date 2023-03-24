@@ -1,0 +1,1 @@
+sam delete --no-prompts

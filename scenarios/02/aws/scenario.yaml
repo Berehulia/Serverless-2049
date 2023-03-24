@@ -1,0 +1,25 @@
+Scenario: '1.0'
+
+Info:
+  Code: '02'
+  Title: 'HTTP -> Serverless Storage'
+
+Test:
+  
+  Input:
+    Type: 'HTTP'
+    Count: '1000'
+    Parallel: 'true'
+
+  Output:
+    - 'Minimal, average, maximum execution time'
+    - 'Average execution cost'
+      
+Infrastructure:
+  Lambda:
+    - 'Function'
+  S3:
+    - 'Bucket'
+        
+Deploy:
+  - 'SAM'

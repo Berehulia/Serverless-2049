@@ -1,0 +1,26 @@
+Scenario: '1.0'
+
+Info:
+  Code: '01'
+  Title: 'HTTP -> DynamoDB'
+
+Test:
+  
+  Input:
+    Type: 'HTTP'
+    Count: '1000'
+    Parallel: 'true'
+
+  Output:
+    Metrics:
+      - 'Average execution time'
+      - 'Average execution cost'
+      
+Infrastructure:
+  Lambda:
+    - 'Function'
+  DynamoDB:
+    - 'Table'
+        
+Deploy:
+  - 'SAM'
