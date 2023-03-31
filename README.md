@@ -9,46 +9,20 @@
 ### 01. From WEB to the serverless NoSQL database
 
 **Description**  
-- The serverless function, which HTTP triggers 100.000 times, writes an input to the serverless NoSQL database.
+- The serverless function, which triggers 1000 times and writes a record into the serverless NoSQL database.
 
 [Scenario](https://github.com/Berehulia/Serverless-2049/blob/master/scenarios/01/scenario-generic.yaml)
 
-| Average execution cost      | AWS | AZURE | GCP |
-|-----------------------------|-----|-------|-----|
-| Java 11 - Plain             |     |       |     |
-| Java 11 - Micronaut         |     |       |     |
-| Java 11 - Micronaut & Graal |     |       |     |
-| Java 11 - Quarkus           |     |       |     |
-| Java 11 - Quarkus & Graal   |     |       |     |
+#### AWS
 
-| Average execution time      | AWS | AZURE | GCP |
-|-----------------------------|-----|-------|-----|
-| Java 11 - Plain             |     |       |     |
-| Java 11 - Micronaut         |     |       |     |
-| Java 11 - Micronaut & Graal |     |       |     |
-| Java 11 - Quarkus           |     |       |     |
-| Java 11 - Quarkus & Graal   |     |       |     |
+| **Java11Function** | Memory, MB | Execution cost, $ | Execution time, ms | Cold start, ms |
+|:------------------:|:----------:|:-----------------:|:------------------:|:--------------:|
+|  Average cheapest  |    256     |    0.000000071    |         16         |      8201      |
+|  Average fastest   |    1024    |    0.000000202    |         11         |      2440      |
 
+| **Java11ArmFunction** | Memory, MB | Execution cost, $ | Execution time, ms | Cold start, ms |
+|:---------------------:|:----------:|:-----------------:|:------------------:|:--------------:|
+|   Average cheapest    |    512     |    0.000000068    |         10         |      4076      |
+|    Average fastest    |    512     |    0.000000068    |         10         |      4076      |
 ---
-
-### 02. From queue to the serverless NoSQL database
-
-Description:
-- The serverless function, which queue triggers 100.000 times, writes an input to the serverless NoSQL database.
-
-| Average execution cost      | AWS | AZURE | GCP |
-|-----------------------------|-----|-------|-----|
-| Java 11 - Plain             |     |       |     |
-| Java 11 - Micronaut         |     |       |     |
-| Java 11 - Micronaut & Graal |     |       |     |
-| Java 11 - Quarkus           |     |       |     |
-| Java 11 - Quarkus & Graal   |     |       |     |
-
-| Average execution time      | AWS | AZURE | GCP |
-|-----------------------------|-----|-------|-----|
-| Java 11 - Plain             |     |       |     |
-| Java 11 - Micronaut         |     |       |     |
-| Java 11 - Micronaut & Graal |     |       |     |
-| Java 11 - Quarkus           |     |       |     |
-| Java 11 - Quarkus & Graal   |     |       |     |
 
