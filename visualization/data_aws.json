@@ -1,0 +1,488 @@
+{
+  "scenarios": [
+    {
+      "name": "Scenario 1",
+      "data": [
+        {
+          "function_name": "Python_x86",
+          "measurements": [
+            {
+              "averagePrice": 3.8419999999999996e-7,
+              "averageDuration": 225.9966666666667,
+              "totalCost": 0.000040395400000000016,
+              "value": 128
+            },
+            {
+              "averagePrice": 3.4339999999999996e-7,
+              "averageDuration": 100.92133333333331,
+              "totalCost": 0.0000369104,
+              "value": 256
+            },
+            {
+              "averagePrice": 4.0119999999999997e-7,
+              "averageDuration": 58.80716666666667,
+              "totalCost": 0.00004207159999999998,
+              "value": 512
+            },
+            {
+              "averagePrice": null,
+              "averageDuration": null,
+              "totalCost": null,
+              "value": 768
+            },
+            {
+              "averagePrice": 5.711999999999999e-7,
+              "averageDuration": 41.26133333333333,
+              "totalCost": 0.0000583576,
+              "value": 1024
+            },
+            {
+              "averagePrice": 0.0000010607999999999999,
+              "averageDuration": 38.09000000000001,
+              "totalCost": 0.0001058896000000001,
+              "value": 2048
+            },
+            {
+              "averagePrice": null,
+              "averageDuration": null,
+              "totalCost": null,
+              "value": 3072
+            },
+            {
+              "averagePrice": null,
+              "averageDuration": null,
+              "totalCost": null,
+              "value": 4096
+            },
+            {
+              "averagePrice": null,
+              "averageDuration": null,
+              "totalCost": null,
+              "value": 8192
+            }
+          ]
+        },
+        {
+          "function_name": "Java_Graal",
+          "measurements": [
+            {
+              "averagePrice": null,
+              "averageDuration": null,
+              "totalCost": null,
+              "value": 128
+            },
+            {
+              "value": 256,
+              "averageDuration": 7.569200038909912,
+              "averagePrice": 3.359999922736279e-8
+            },
+            {
+              "value": 512,
+              "averageDuration": 7.886866569519043,
+              "averagePrice": 6.719999845472557e-8
+            },
+            {
+              "value": 768,
+              "averageDuration": 7.933849811553955,
+              "averagePrice": 1.0080000123480204e-7
+            },
+            {
+              "value": 1024,
+              "averageDuration": 7.248849868774414,
+              "averagePrice": 1.3439999690945115e-7
+            },
+            {
+              "value": 2048,
+              "averageDuration": 7.233083248138428,
+              "averagePrice": 2.687999938189023e-7
+            },
+            {
+              "value": 3072,
+              "averageDuration": 7.126316547393799,
+              "averagePrice": 4.0320000493920816e-7
+            },
+            {
+              "value": 4096,
+              "averageDuration": 7.170249938964844,
+              "averagePrice": 5.375999876378046e-7
+            },
+            {
+              "value": 8192,
+              "averageDuration": 7.53861665725708,
+              "averagePrice": 0.0000010751999752756092
+            }
+          ]
+        },
+        {
+          "function_name": "Java_GraalQuarkus",
+          "measurements": [
+                        {
+              "averagePrice": null,
+              "averageDuration": null,
+              "totalCost": null,
+              "value": 128
+            },
+            {
+              "value": 256,
+              "averageDuration": 7.098333358764648,
+              "averagePrice": 3.359999922736279e-8
+            },
+            {
+              "value": 512,
+              "averageDuration": 7.586999893188477,
+              "averagePrice": 6.719999845472557e-8
+            },
+            {
+              "value": 768,
+              "averageDuration": 7.045499801635742,
+              "averagePrice": 1.0080000123480204e-7
+            },
+            {
+              "value": 1024,
+              "averageDuration": 7.004499912261963,
+              "averagePrice": 1.3439999690945115e-7
+            },
+            {
+              "value": 2048,
+              "averageDuration": 6.625666618347168,
+              "averagePrice": 2.3520000524968054e-7
+            },
+            {
+              "averagePrice": null,
+              "averageDuration": null,
+              "totalCost": null,
+              "value": 3072
+            },
+            {
+              "averagePrice": null,
+              "averageDuration": null,
+              "totalCost": null,
+              "value": 4096
+            },
+            {
+              "averagePrice": null,
+              "averageDuration": null,
+              "totalCost": null,
+              "value": 8192
+            }
+          ]
+        },
+        {
+          "function_name": "Java_ARM",
+          "measurements": [
+            {
+              "averagePrice": null,
+              "averageDuration": null,
+              "totalCost": null,
+              "value": 128
+            },
+            {
+              "value": 256,
+              "averageDuration": 20.35890007019043,
+              "averagePrice": 7.140000235494881e-8
+            },
+            {
+              "value": 512,
+              "averageDuration": 9.96619987487793,
+              "averagePrice": 6.799999852091787e-8
+            },
+            {
+              "value": 768,
+              "averageDuration": 10.734550476074219,
+              "averagePrice": 1.1219999862532859e-7
+            },
+            {
+              "value": 1024,
+              "averageDuration": 9.951433181762695,
+              "averagePrice": 1.3599999704183574e-7
+            },
+            {
+              "value": 2048,
+              "averageDuration": 10.14798355102539,
+              "averagePrice": 2.9919999633420957e-7
+            },
+            {
+              "value": 3072,
+              "averageDuration": 9.993800163269043,
+              "averagePrice": 4.0800000533636194e-7
+            },
+            {
+              "value": 4096,
+              "averageDuration": 11.654417037963867,
+              "averagePrice": 6.527999971694953e-7
+            },
+            {
+              "value": 8192,
+              "averageDuration": 11.097916603088379,
+              "averagePrice": 0.0000013055999943389907
+            }
+          ]
+        },
+        {
+          "function_name": "Java_x86",
+          "measurements": [
+            {
+              "averagePrice": null,
+              "averageDuration": null,
+              "totalCost": null,
+              "value": 128
+            },
+            {
+              "value": 256,
+              "averageDuration": 22.611865997314453,
+              "averagePrice": 9.65999973345788e-8
+            },
+            {
+              "value": 512,
+              "averageDuration": 10.035717010498047,
+              "averagePrice": 9.240000053978292e-8
+            },
+            {
+              "value": 768,
+              "averageDuration": 9.81095027923584,
+              "averagePrice": 1.260000033198594e-7
+            },
+            {
+              "value": 1024,
+              "averageDuration": 10.133500099182129,
+              "averagePrice": 1.8480000107956585e-7
+            },
+            {
+              "value": 2048,
+              "averageDuration": 10.08845043182373,
+              "averagePrice": 3.696000021591317e-7
+            },
+            {
+              "value": 3072,
+              "averageDuration": 11.232616424560547,
+              "averagePrice": 6.047999931979575e-7
+            },
+            {
+              "value": 4096,
+              "averageDuration": 9.794866561889648,
+              "averagePrice": 6.719999987581105e-7
+            },
+            {
+              "value": 8192,
+              "averageDuration": 10.57859992980957,
+              "averagePrice": 0.0000014784000086365268
+            }
+          ]
+        },
+        {
+          "function_name": "Java_SnapStart",
+          "measurements": [
+            {
+              "averagePrice": null,
+              "averageDuration": null,
+              "totalCost": null,
+              "value": 128
+            },
+            {
+              "value": 256,
+              "averageDuration": 17.845849990844727,
+              "averagePrice": 7.559999914974469e-8
+            },
+            {
+              "value": 512,
+              "averageDuration": 10.52181625366211,
+              "averagePrice": 9.240000053978292e-8
+            },
+            {
+              "value": 768,
+              "averageDuration": 10.191933631896973,
+              "averagePrice": 1.3860000080967438e-7
+            },
+            {
+              "value": 1024,
+              "averageDuration": 10.448017120361328,
+              "averagePrice": 1.8480000107956585e-7
+            },
+            {
+              "value": 2048,
+              "averageDuration": 10.96031665802002,
+              "averagePrice": 3.696000021591317e-7
+            },
+            {
+              "value": 3072,
+              "averageDuration": 10.791417121887207,
+              "averagePrice": 5.544000032386975e-7
+            },
+            {
+              "value": 4096,
+              "averageDuration": 10.289766311645508,
+              "averagePrice": 7.392000043182634e-7
+            },
+            {
+              "value": 8192,
+              "averageDuration": 10.024733543395996,
+              "averagePrice": 0.0000014784000086365268
+            }
+          ]
+        },
+        {
+          "function_name": "Java_Micronaut",
+          "measurements": [
+            {
+              "averagePrice": null,
+              "averageDuration": null,
+              "totalCost": null,
+              "value": 128
+            },
+            {
+              "averagePrice": null,
+              "averageDuration": null,
+              "totalCost": null,
+              "value": 256
+            },
+            {
+              "value": 512,
+              "averageDuration": 27.147499084472656,
+              "averagePrice": 2.3520000524968054e-7
+            },
+            {
+              "value": 768,
+              "averageDuration": 13.17300033569336,
+              "averagePrice": 1.7639999327911937e-7
+            },
+            {
+              "value": 1024,
+              "averageDuration": 12.116999626159668,
+              "averagePrice": 2.184000038596423e-7
+            },
+            {
+              "value": 2048,
+              "averageDuration": 11.390832901000977,
+              "averagePrice": 4.0320000493920816e-7
+            },{
+              "averagePrice": null,
+              "averageDuration": null,
+              "totalCost": null,
+              "value": 3072
+            },
+            {
+              "averagePrice": null,
+              "averageDuration": null,
+              "totalCost": null,
+              "value": 4096
+            },
+            {
+              "averagePrice": null,
+              "averageDuration": null,
+              "totalCost": null,
+              "value": 8192
+            }
+          ]
+        },
+        {
+          "function_name": "Java_GraalMicronaut",
+          "measurements": [
+            {
+              "averagePrice": null,
+              "averageDuration": null,
+              "totalCost": null,
+              "value": 128
+            },
+            {
+              "value": 256,
+              "averageDuration": 8.280500411987305,
+              "averagePrice": 3.7799999574872345e-8
+            },
+            {
+              "value": 512,
+              "averageDuration": 8.481666564941406,
+              "averagePrice": 7.559999914974469e-8
+            },
+            {
+              "value": 768,
+              "averageDuration": 8.529999732971191,
+              "averagePrice": 1.1339999872461703e-7
+            },
+            {
+              "value": 1024,
+              "averageDuration": 8.995333671569824,
+              "averagePrice": 1.5119999829948938e-7
+            },
+            {
+              "value": 2048,
+              "averageDuration": 8.063833236694336,
+              "averagePrice": 3.0239999659897876e-7
+            },{
+              "averagePrice": null,
+              "averageDuration": null,
+              "totalCost": null,
+              "value": 3072
+            },
+            {
+              "averagePrice": null,
+              "averageDuration": null,
+              "totalCost": null,
+              "value": 4096
+            },
+            {
+              "averagePrice": null,
+              "averageDuration": null,
+              "totalCost": null,
+              "value": 8192
+            }
+          ]
+        },
+        {
+          "function_name": "Java_Quarkus",
+          "measurements": [
+            {
+              "averagePrice": null,
+              "averageDuration": null,
+              "totalCost": null,
+              "value": 128
+            },
+            {
+              "averagePrice": null,
+              "averageDuration": null,
+              "totalCost": null,
+              "value": 256
+            },
+            {
+              "value": 512,
+              "averageDuration": 19.42566680908203,
+              "averagePrice": 1.679999996895276e-7
+            },
+            {
+              "value": 768,
+              "averageDuration": 14.14566707611084,
+              "averagePrice": 1.8900000497978908e-7
+            },
+            {
+              "value": 1024,
+              "averageDuration": 11.828666687011719,
+              "averagePrice": 2.0160000246960408e-7
+            },
+            {
+              "value": 2048,
+              "averageDuration": 13.341666221618652,
+              "averagePrice": 4.704000104993611e-7
+            },
+            {
+              "averagePrice": null,
+              "averageDuration": null,
+              "totalCost": null,
+              "value": 3072
+            },
+            {
+              "averagePrice": null,
+              "averageDuration": null,
+              "totalCost": null,
+              "value": 4096
+            },
+            {
+              "averagePrice": null,
+              "averageDuration": null,
+              "totalCost": null,
+              "value": 8192
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
