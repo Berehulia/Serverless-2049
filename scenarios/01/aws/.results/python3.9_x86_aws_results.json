@@ -1,0 +1,82 @@
+{
+  "lambdaARN": "arn:aws:lambda:eu-central-1:299339426808:function:python-scenario-01-PythonScenario01Function-EP8fyqCWqLDj",
+  "strategy": "speed",
+  "num": 100,
+  "payload": {
+    "body": "",
+    "headers": {},
+    "httpMethod": "GET",
+    "isBase64Encoded": false,
+    "multiValueHeaders": {},
+    "multiValueQueryStringParameters": {},
+    "path": "pythonScenario01",
+    "pathParameters": {},
+    "queryStringParameters": {},
+    "requestContext": {},
+    "resource": "",
+    "stageVariables": {}
+  },
+  "powerValues": [
+    128,
+    256,
+    512,
+    768,
+    1024,
+    2048,
+    3008
+  ],
+  "stats": [
+    {
+      "averagePrice": 8.400000000000001e-8,
+      "averageDuration": 39.092833333333324,
+      "totalCost": 0.000009143399999999996,
+      "value": 128
+    },
+    {
+      "averagePrice": 6.300000000000001e-8,
+      "averageDuration": 14.66316666666667,
+      "totalCost": 0.000007194600000000002,
+      "value": 256
+    },
+    {
+      "averagePrice": 7.56e-8,
+      "averageDuration": 8.912833333333333,
+      "totalCost": 0.00000897120000000001,
+      "value": 512
+    },
+    {
+      "averagePrice": 1.2600000000000002e-7,
+      "averageDuration": 9.498666666666669,
+      "totalCost": 0.000014049000000000017,
+      "value": 768
+    },
+    {
+      "averagePrice": 1.512e-7,
+      "averageDuration": 8.80483333333333,
+      "totalCost": 0.000017186400000000022,
+      "value": 1024
+    },
+    {
+      "averagePrice": 2.688e-7,
+      "averageDuration": 7.830166666666667,
+      "totalCost": 0.000029601599999999978,
+      "value": 2048
+    },
+    {
+      "averagePrice": 4.4415e-7,
+      "averageDuration": 8.491333333333332,
+      "totalCost": 0.00004747470000000002,
+      "value": 3008
+    }
+  ],
+  "analysis": {
+    "power": 2048,
+    "cost": 2.688e-7,
+    "duration": 7.830166666666667,
+    "stateMachine": {
+      "executionCost": 0.00033,
+      "lambdaCost": 0.00013362090000000005,
+      "visualization": "https://lambda-power-tuning.show/#gAAAAQACAAMABAAIwAs=;EF8cQlWcakH3mg5BivoXQZngDEG6kPpAgNwHQQ==;fWO0M55KhzOKWaIznkoHNIpZIjSXT5A0g3PuNA=="
+    }
+  }
+}

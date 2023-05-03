@@ -1,0 +1,96 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  python-scenario-01
+
+  Sample SAM Template for python-scenario-01
+
+# More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
+Globals:
+  Function:
+    Environment:
+      Variables:
+        DYNAMODB_TABLE_NAME: serverless2049-dynamodb-python_function-uuids-table
+    FunctionUrlConfig:
+      AuthType: NONE
+    MemorySize: 512
+    Timeout: 30
+
+Resources:
+  # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+  PythonScenario01Function:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: python_scenario_01/
+      Handler: function.lambda_handler
+      Runtime: python3.9
+      Architectures:
+        - x86_64
+      Policies:
+        - AmazonDynamoDBFullAccess
+      Events:
+        PythonScenario01:
+          # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Type: Api
+          Properties:
+            Path: /pythonScenario01
+            Method: get
+
+  PythonScenario01FunctionArm:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: python_scenario_01/
+      Handler: function.lambda_handler
+      Runtime: python3.9
+      Architectures:
+        - arm64
+      Policies:
+        - AmazonDynamoDBFullAccess
+      Events:
+        PythonScenario01Arm:
+          # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Type: Api
+          Properties:
+            Path: /pythonScenario01Arm
+            Method: get
+
+  # More info https://github.com/alexcasalboni/aws-lambda-power-tuning/blob/master/scripts/deploy-sar-app.yml
+  PowerTuningApp:
+    Type: AWS::Serverless::Application
+    Properties:
+      Location:
+        ApplicationId: arn:aws:serverlessrepo:us-east-1:451282441545:applications/aws-lambda-power-tuning
+        SemanticVersion: 4.3.0
+
+  DatabaseTable:
+    Type: AWS::Serverless::SimpleTable
+    Properties:
+      TableName: serverless2049-dynamodb-python_function-uuids-table
+      PrimaryKey:
+        Name: id
+        Type: String
+
+Outputs:
+  # ServerlessRestApi is an implicit API created out of Events key under Serverless::Function
+  # Find out more about other implicit resources you can reference within SAM
+  # https://github.com/awslabs/serverless-application-model/blob/master/docs/internals/generated_resources.rst#api
+  PythonScenario01Api:
+    Description: "API Gateway endpoint URL for Prod stage for PythonScenario01Function"
+    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/pythonScenario01/"
+  PythonScenario01Function:
+    Description: "PythonScenario01Function Lambda Function ARN"
+    Value: !GetAtt PythonScenario01Function.Arn
+  PythonScenario01FunctionIamRole:
+    Description: "Implicit IAM Role created for PythonScenario01Function"
+    Value: !GetAtt PythonScenario01FunctionRole.Arn
+  PythonScenario01ArmApi:
+    Description: "API Gateway endpoint URL for Prod stage for PythonScenario01Function"
+    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/pythonScenario01Arm/"
+  PythonScenario01FunctionArm:
+    Description: "PythonScenario01FunctionArm Lambda Function ARN"
+    Value: !GetAtt PythonScenario01FunctionArm.Arn
+  PythonScenario01FunctionArmIamRole:
+    Description: "Implicit IAM Role created for PythonScenario01FunctionArm"
+    Value: !GetAtt PythonScenario01FunctionArmRole.Arn
+  PowerTuningStateMachine:
+    Value: !GetAtt PowerTuningApp.Outputs.StateMachineARN
