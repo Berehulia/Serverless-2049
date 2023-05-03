@@ -72,6 +72,24 @@
 |:----------------:|:----------:|:-----------------:|:------------------:|:--------------:|
 | Average cheapest |    256     |    0.000000038    |         8          |      475       |
 | Average fastest  |    2048    |    0.000000302    |         8          |      468       |
+
+
+**Python 3.9**
+
+|                  | Memory, MB | Execution cost, $ | Execution time, ms | Cold start, ms |
+|:----------------:|:----------:|:-----------------:|:------------------:|:--------------:|
+| Average cheapest |    256     |    0.000007195    |         18         |      463       |
+| Average fastest  |    2048    |    0.000029602    |         9          |      439       |
+
+
+**Python 3.9 (ARM)**
+
+|                  | Memory, MB | Execution cost, $ | Execution time, ms | Cold start, ms |
+|:----------------:|:----------:|:-----------------:|:------------------:|:--------------:|
+| Average cheapest |    256     |    0.000006962    |         16         |      439       |
+| Average fastest  |    1024    |    0.000012403    |         8          |      437       |
+
+
 ### 02. HTTP triggered function writes to serverless storage
 
 **Description**

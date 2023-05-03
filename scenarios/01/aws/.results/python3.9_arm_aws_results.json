@@ -1,0 +1,82 @@
+{
+  "lambdaARN": "arn:aws:lambda:eu-central-1:299339426808:function:python-scenario-01-PythonScenario01FunctionArm-IJleRx0wOJ2Y",
+  "strategy": "speed",
+  "num": 100,
+  "payload": {
+    "body": "",
+    "headers": {},
+    "httpMethod": "GET",
+    "isBase64Encoded": false,
+    "multiValueHeaders": {},
+    "multiValueQueryStringParameters": {},
+    "path": "pythonScenario01Arm",
+    "pathParameters": {},
+    "queryStringParameters": {},
+    "requestContext": {},
+    "resource": "",
+    "stageVariables": {}
+  },
+  "powerValues": [
+    128,
+    256,
+    512,
+    768,
+    1024,
+    2048,
+    3008
+  ],
+  "stats": [
+    {
+      "averagePrice": 6.119999999999999e-8,
+      "averageDuration": 35.82883333333334,
+      "totalCost": 0.0000069615000000000036,
+      "value": 128
+    },
+    {
+      "averagePrice": 5.1e-8,
+      "averageDuration": 14.227499999999994,
+      "totalCost": 0.000005715400000000003,
+      "value": 256
+    },
+    {
+      "averagePrice": 6.8e-8,
+      "averageDuration": 9.148666666666665,
+      "totalCost": 0.000007643199999999998,
+      "value": 512
+    },
+    {
+      "averagePrice": 1.02e-7,
+      "averageDuration": 9.672166666666666,
+      "totalCost": 0.000011811600000000006,
+      "value": 768
+    },
+    {
+      "averagePrice": 1.2239999999999998e-7,
+      "averageDuration": 8.192833333333333,
+      "totalCost": 0.000012403200000000014,
+      "value": 1024
+    },
+    {
+      "averagePrice": 2.4479999999999997e-7,
+      "averageDuration": 8.136833333333335,
+      "totalCost": 0.000025948800000000018,
+      "value": 2048
+    },
+    {
+      "averagePrice": 3.5954999999999996e-7,
+      "averageDuration": 8.118666666666668,
+      "totalCost": 0.00003883139999999995,
+      "value": 3008
+    }
+  ],
+  "analysis": {
+    "power": 3008,
+    "cost": 3.5954999999999996e-7,
+    "duration": 8.118666666666668,
+    "stateMachine": {
+      "executionCost": 0.00033,
+      "lambdaCost": 0.00010931509999999997,
+      "visualization": "https://lambda-power-tuning.show/#gAAAAQACAAMABAAIwAs=;ulAPQtejY0HwYBJBMsEaQdgVA0F4MAJBD+YBQQ==;Dm2DMxgLWzNlB5IzGAvbMw5tAzQObYM0LQjBNA=="
+    }
+  }
+}
