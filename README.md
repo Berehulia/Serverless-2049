@@ -80,21 +80,13 @@
 | Average cheapest |    1024    |     0.0000320     |        1890        |      2569      |
 | Average fastest  |    2048    |     0.0000410     |        1218        |      1953      |
 
-### 03. Queue triggered function writes to DynamoDB
+### 03. Queue triggered function writes to a serverless database
 
 [Scenario](https://github.com/Berehulia/Serverless-2049/master/scenarios/03/scenario.yaml)
 
 #### AWS
 
 **Description**
-
-- The serverless function, which triggers 50 times and just prints "Hello world to console" 
-
-|         | Memory, MB | Min execution time, ms | Avg execution time, ms | Cold start, ms | First invocation time, ms |
-|:-------:|:----------:|:----------------------:|:----------------------:|:--------------:|---------------------------|
-| Java 11 |    512     |           1            |           2            |      516       | 14-70                     |
-| Python  |    512     |           1            |           2            |      108       | 11-19                     |
-
 
 - The serverless function, which triggers 50 times and writes a record into the DynamoDB.
 
