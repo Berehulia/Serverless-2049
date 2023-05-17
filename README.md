@@ -88,9 +88,9 @@
 
 **Description**
 
-- The serverless function, which triggers 50 times and writes a record into the DynamoDB.
+- The serverless function, which triggers 1000 times and writes a record into the DynamoDB.
 
 |         | Memory, MB | Min execution time, ms | Avg execution time, ms | Cold start, ms | First invocation time, ms |
 |:-------:|:----------:|:----------------------:|:----------------------:|:--------------:|---------------------------|
-| Java 11 |    512     |           15           |           33           |      2490      | 4960                      |
-| Python  |    512     |          214           |          400           |      331       | 1600                      |
+| Java 11 |    512     |           16           |           283          |      2580      | 4700                      |
+| Python  |    512     |           12           |           22           |      401       |   65                      |
