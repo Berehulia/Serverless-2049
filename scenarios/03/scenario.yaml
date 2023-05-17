@@ -1,0 +1,21 @@
+Scenario: '1.0'
+
+Info:
+  Code: '03'
+  Title: 'Lambda -> DynamoDB'
+
+Test:
+  
+  Input:
+    Type: 'Queue'
+    Count: '50'
+    Parallel: 'true'
+
+  Output:
+    - 'Minimal, average, maximum execution time'
+
+Infrastructure:
+  Function:
+  Database:
+
+Deploy:
