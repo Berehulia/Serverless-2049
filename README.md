@@ -19,22 +19,22 @@
 
 |                  | Memory, MB | Execution cost, $ | Execution time, ms | Cold start, ms |
 |:----------------:|:----------:|:-----------------:|:------------------:|:--------------:|
-| Average cheapest |    512     |    0.000000092    |         10         |      4751      |
-| Average fastest  |    512     |    0.000000092    |         10         |      4751      |
+| Average cheapest |    512     |   0.0000000920    |         10         |      4751      |
+| Average fastest  |    512     |   0.0000000920    |         10         |      4751      |
 
 **Java 11 runtime (ARM)**
 
 |                  | Memory, MB | Execution cost, $ | Execution time, ms | Cold start, ms |
 |:----------------:|:----------:|:-----------------:|:------------------:|:--------------:|
-| Average cheapest |    512     |    0.000000068    |         10         |      4076      |
-| Average fastest  |    512     |    0.000000068    |         10         |      4076      |
+| Average cheapest |    512     |   0.0000000680    |         10         |      4076      |
+| Average fastest  |    512     |   0.0000000680    |         10         |      4076      |
 
 **Java 11 runtime (SnapStart)**
 
 |                  | Memory, MB | Execution cost, $ | Execution time, ms | Cold start, ms |
 |:----------------:|:----------:|:-----------------:|:------------------:|:--------------:|
-| Average cheapest |    256     |    0.000000076    |         18         |      8454      |
-| Average fastest  |    768     |    0.000000139    |         10         |      3098      |
+| Average cheapest |    256     |   0.0000000760    |         18         |      8454      |
+| Average fastest  |    768     |   0.0000001390    |         10         |      3098      |
 
 **Custom runtime (Java 11 & GraalNI)**
 
