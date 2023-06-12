@@ -40,55 +40,71 @@
 
 |                  | Memory, MB | Execution cost, $ | Execution time, ms | Cold start, ms |
 |:----------------:|:----------:|:-----------------:|:------------------:|:--------------:|
-| Average cheapest |    256     |    0.000000034    |         8          |      696       |
-| Average fastest  |    1024    |    0.000000134    |         7          |      477       |
+| Average cheapest |    256     |   0.0000000340    |         8          |      696       |
+| Average fastest  |    1024    |   0.0000001340    |         7          |      477       |
 
+**Java 17 runtime**
+
+|                  | Memory, MB | Execution cost, $ | Execution time, ms | Cold start, ms |
+|:----------------:|:----------:|:-----------------:|:------------------:|:--------------:|
+| Average cheapest |    512     |   0.0000001090    |         13         |      1763      |
+| Average fastest  |    8192    |   0.0000014800    |         10         |      354       |
+
+**Java 17 runtime (ARM)**
+
+|                  | Memory, MB | Execution cost, $ | Execution time, ms | Cold start, ms |
+|:----------------:|:----------:|:-----------------:|:------------------:|:--------------:|
+| Average cheapest |    512     |   0.0000000950    |         13         |      1857      |
+| Average fastest  |    3072    |   0.0000004500    |         10         |      399       |
 
 **Quarkus**
 
 |                  | Memory, MB | Execution cost, $ | Execution time, ms | Cold start, ms |
 |:----------------:|:----------:|:-----------------:|:------------------:|:--------------:|
-| Average cheapest |    512     |    0.000000168    |         19         |      9212      |
-| Average fastest  |    1024    |    0.000000202    |         12         |      4732      |
-
+| Average cheapest |    512     |   0.0000001680    |         19         |      9212      |
+| Average fastest  |    1024    |   0.0000002020    |         12         |      4732      |
 
 **Quarkus GraalVM**
 
 |                  | Memory, MB | Execution cost, $ | Execution time, ms | Cold start, ms |
 |:----------------:|:----------:|:-----------------:|:------------------:|:--------------:|
-| Average cheapest |    256     |    0.000000034    |         7          |      864       |
-| Average fastest  |    2048    |    0.000000234    |         7          |      399       |
+| Average cheapest |    256     |   0.0000000340    |         7          |      864       |
+| Average fastest  |    2048    |   0.0000002340    |         7          |      399       |
 
 **Java 11 runtime (Micronaut)**
 
 |                  | Memory, MB | Execution cost, $ | Execution time, ms | Cold start, ms |
 |:----------------:|:----------:|:-----------------:|:------------------:|:--------------:|
-| Average cheapest |    768     |    0.000000176    |         13         |      5222      |
-| Average fastest  |    2048    |    0.000000400    |         11         |      4253      |
+| Average cheapest |    768     |   0.0000001760    |         13         |      5222      |
+| Average fastest  |    2048    |   0.0000004000    |         11         |      4253      |
 
 **Java 11 runtime (Micronaut & GraalNI)**
 
 |                  | Memory, MB | Execution cost, $ | Execution time, ms | Cold start, ms |
 |:----------------:|:----------:|:-----------------:|:------------------:|:--------------:|
-| Average cheapest |    256     |    0.000000038    |         8          |      475       |
-| Average fastest  |    2048    |    0.000000302    |         8          |      468       |
-
+| Average cheapest |    256     |   0.0000000380    |         8          |      475       |
+| Average fastest  |    2048    |   0.0000003020    |         8          |      468       |
 
 **Python 3.9**
 
 |                  | Memory, MB | Execution cost, $ | Execution time, ms | Cold start, ms |
 |:----------------:|:----------:|:-----------------:|:------------------:|:--------------:|
-| Average cheapest |    256     |    0.000007195    |         18         |      463       |
-| Average fastest  |    2048    |    0.000029602    |         9          |      439       |
-
+| Average cheapest |    256     |   0.0000071950    |         18         |      463       |
+| Average fastest  |    2048    |   0.0000296020    |         9          |      439       |
 
 **Python 3.9 (ARM)**
 
 |                  | Memory, MB | Execution cost, $ | Execution time, ms | Cold start, ms |
 |:----------------:|:----------:|:-----------------:|:------------------:|:--------------:|
-| Average cheapest |    256     |    0.000006962    |         16         |      439       |
-| Average fastest  |    1024    |    0.000012403    |         8          |      437       |
+| Average cheapest |    256     |   0.0000069620    |         16         |      439       |
+| Average fastest  |    1024    |   0.0000124030    |         8          |      437       |
 
+**Rust 1.70**
+
+|                  | Memory, MB | Execution cost, $ | Execution time, ms | Cold start, ms |
+|:----------------:|:----------:|:-----------------:|:------------------:|:--------------:|
+| Average cheapest |    128     |   0.0000000147    |         7          |      795       |
+| Average fastest  |    256     |   0.0000000252    |         6          |      432       |
 
 ### 02. HTTP triggered function writes to serverless storage
 
